@@ -1,0 +1,24 @@
+{
+  "_note": "SAMPLE DATA. Replace the topics, hours and the ML calendar with the real ACSAI syllabi before the demo. Topic ids must stay unique; prereqs must use topic ids.",
+  "course": "Linear Algebra (ACSAI, Sapienza)",
+  "linked_course": "Machine Learning",
+  "demo_today": "2027-02-15",
+  "default_exam_date": "2027-06-15",
+  "topics": [
+    {"id": "vectors", "title": "Vectors and the dot product", "hours": 2, "prereqs": []},
+    {"id": "matrices", "title": "Matrices and matrix-vector products", "hours": 2, "prereqs": ["vectors"]},
+    {"id": "systems", "title": "Linear systems and Gaussian elimination", "hours": 3, "prereqs": ["matrices"]},
+    {"id": "inverse_rank", "title": "Inverse matrices and rank", "hours": 3, "prereqs": ["systems"]},
+    {"id": "vector_spaces", "title": "Span, independence and basis", "hours": 3, "prereqs": ["systems"]},
+    {"id": "projections", "title": "Orthogonality and projections", "hours": 3, "prereqs": ["inverse_rank"]},
+    {"id": "determinants", "title": "Determinants", "hours": 2, "prereqs": ["matrices"]},
+    {"id": "eigen", "title": "Eigenvalues and eigenvectors", "hours": 3, "prereqs": ["determinants"]},
+    {"id": "diagonalization", "title": "Diagonalization and symmetric matrices", "hours": 3, "prereqs": ["eigen", "vector_spaces"]}
+  ],
+  "ml_lectures": [
+    {"date": "2027-03-02", "title": "Linear regression", "needs": ["vectors", "matrices"]},
+    {"date": "2027-03-16", "title": "Least squares and the normal equations", "needs": ["inverse_rank", "projections"]},
+    {"date": "2027-04-06", "title": "Principal Component Analysis (PCA)", "needs": ["eigen", "diagonalization"]},
+    {"date": "2027-04-27", "title": "Ridge regression", "needs": ["inverse_rank"]}
+  ]
+}
