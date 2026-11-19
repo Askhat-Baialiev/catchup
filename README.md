@@ -1,10 +1,16 @@
-# CatchUp: a course that never closes
+# CatchUp — a course that never closes
 
-Prototype for the Reply Student Tech Clash 2026, "AI on Campus", Level 2 (Path B, coding).
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Retrieval](https://img.shields.io/badge/retrieval-BM25%20%C2%B7%20no%20vector%20DB-4c1)
+![Tests](https://img.shields.io/badge/tests-11%20offline-success)
+![Reply Student Tech Clash](https://img.shields.io/badge/Reply%20Student%20Tech%20Clash-2026-6e5494)
 
-CatchUp is an AI agent for a student who failed or missed a course and cannot wait a year for it to run
-again. This prototype covers one case: **Linear Algebra (LA) for a student who is following Machine
-Learning (ML) at the same time.** The agent teaches LA from the lecturer's own material, in the order the
+Prototype for the Reply Student Tech Clash 2026, "AI on Campus" track (Level 2, Path B — coding).
+
+A tutoring agent for a student who failed or missed a course and cannot wait a year for it to run
+again. This prototype covers one case: **Linear Algebra (LA) for a student taking Machine
+Learning (ML) at the same time.** It teaches LA from the lecturer's own material, in the order the
 next ML lectures need it.
 
 > The course material and the ML calendar in this repo are **sample data** so the app runs out of the box.
@@ -110,8 +116,8 @@ directions; the tests show the cases it handles.
 
 ## Models, libraries, frameworks
 
-- **Model:** any OpenRouter model with tool calling. Default `anthropic/claude-haiku-5.5`; change
-  `CATCHUP_MODEL` in `.env`. A typical turn is 2 to 4 model calls.
+- **Model:** any OpenRouter model with tool calling, selected with `CATCHUP_MODEL` in `.env`. A
+  typical turn is 2 to 4 model calls.
 - **Libraries:** `streamlit` (interface), `requests` (OpenRouter API), `pypdf` (reading PDF slides).
 - **No agent framework.** The loop is about 100 lines in `catchup/agent.py`.
 

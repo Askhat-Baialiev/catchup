@@ -15,7 +15,7 @@ TRACE_PATH = LOGS_DIR / "trace.jsonl"
 INBOX_PATH = MEMORY_DIR / "lecturer_inbox.json"
 
 # Any OpenRouter model that supports tool calling works. Change it in .env.
-DEFAULT_MODEL = "anthropic/claude-haiku-5.5"
+DEFAULT_MODEL = "openai/gpt-4o-mini"
 
 STEP_BUDGET = 6            # max plan->act->observe steps per student message
 MASTERY_CORRECT = 2        # correct answers needed before a topic counts as mastered
